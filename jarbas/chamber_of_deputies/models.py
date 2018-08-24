@@ -1,4 +1,4 @@
-from django.contrib.postgres.fields import JSONField
+from django.contrib.postgres.fields import ArrayField, JSONField
 from django.contrib.postgres.indexes import GinIndex
 from django.contrib.postgres.search import SearchVectorField
 from django.db import models
@@ -37,7 +37,7 @@ class Reimbursement(models.Model):
 
     total_value = models.DecimalField('Valor da Restituição', max_digits=10, decimal_places=3, blank=True, null=True)
     total_net_value = models.DecimalField('Valor Líquido', max_digits=10, decimal_places=3)
-    reimbursement_numbers = models.CharField('Números dos Ressarcimentos', max_length=140)
+    numbers = ArrayField(models.CharField('Números dos Ressarcimentos', max_length=128), default=list)
 
     congressperson_id = models.IntegerField('Identificador Único do Parlamentar', blank=True, null=True)
     congressperson_name = models.CharField('Nome do Parlamentar', max_length=140, db_index=True, blank=True, null=True)
@@ -107,8 +107,8 @@ class Reimbursement(models.Model):
         return self.receipt_url
 
     @property
-    def all_reimbursement_numbers(self):
-        return self.as_list(self.reimbursement_numbers, int)
+    def all_numbers(self):
+        return [int(num) for num in self.numbers]
 
     @staticmethod
     def as_list(content, cast=None):

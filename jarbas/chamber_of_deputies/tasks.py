@@ -2,7 +2,7 @@ from itertools import chain
 
 from rows.fields import FloatField
 
-from jarbas.chamber_of_deputies.fields import DateAsStringField, IntegerField
+from jarbas.chamber_of_deputies.fields import ArrayField, DateAsStringField, IntegerField
 from jarbas.chamber_of_deputies.models import Reimbursement
 
 
@@ -31,7 +31,8 @@ FLOATS = (
 TYPES = tuple(chain(
     ((field, IntegerField) for field in INTEGERS),
     ((field, FloatField) for field in FLOATS),
-    (('issue_date', DateAsStringField),)
+    (('issue_date', DateAsStringField),),
+    (('numbers', ArrayField),),
 ))
 
 

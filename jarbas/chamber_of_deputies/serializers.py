@@ -6,7 +6,7 @@ from jarbas.core.models import Company
 
 class ReimbursementSerializer(serializers.ModelSerializer):
 
-    all_reimbursement_numbers = serializers.SerializerMethodField()
+    all_numbers = serializers.SerializerMethodField()
     document_value = serializers.SerializerMethodField()
     probability = serializers.SerializerMethodField()
     receipt = serializers.SerializerMethodField()
@@ -15,8 +15,8 @@ class ReimbursementSerializer(serializers.ModelSerializer):
     total_net_value = serializers.SerializerMethodField()
     total_value = serializers.SerializerMethodField()
 
-    def get_all_reimbursement_numbers(self, obj):
-        return obj.all_reimbursement_numbers
+    def get_all_numbers(self, obj):
+        return obj.all_numbers
 
     def get_document_value(self, obj):
         return to_float(obj.document_value)
@@ -48,7 +48,7 @@ class ReimbursementSerializer(serializers.ModelSerializer):
             'id',
             'receipt_fetched',
             'receipt_url',
-            'reimbursement_numbers',
+            'numbers',
         )
 
 
