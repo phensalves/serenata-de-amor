@@ -391,7 +391,6 @@ viewReimbursementDetails lang reimbursement =
         fields =
             [ Field ApplicantId <| toString reimbursement.applicantId
             , Field DocumentId <| toString reimbursement.documentId
-            , Field NetValues <| formatPrices lang reimbursement.netValues
             , Field ReimbursementValues <| maybeFormatPrices lang reimbursement.reimbursementValues
             , Field ReimbursementNumbers <| reimbursements
             , Field Fields.DocumentType <| documentType

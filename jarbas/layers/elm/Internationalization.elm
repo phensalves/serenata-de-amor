@@ -75,9 +75,6 @@ translate lang trans =
                 FieldReimbursementNumbers ->
                     ReimbursementField.reimbursementNumbers
 
-                FieldNetValues ->
-                    ReimbursementField.netValues
-
                 FieldCongresspersonId ->
                     ReimbursementField.congresspersonId
 

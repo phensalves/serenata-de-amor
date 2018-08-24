@@ -18,7 +18,6 @@ type alias Reimbursement =
     , totalValue : Maybe Float
     , totalNetValue : Float
     , reimbursementNumbers : List Int
-    , netValues : List Float
     , congresspersonId : Maybe Int
     , congresspersonName : Maybe String
     , congresspersonDocument : Maybe Int

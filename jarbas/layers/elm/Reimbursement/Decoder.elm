@@ -66,8 +66,7 @@ singleDecoder lang apiKey =
             |> required "applicant_id" int
             |> required "total_value" (nullable float)
             |> required "total_net_value" float
-            |> required "all_reimbursement_numbers" (list int)
-            |> required "all_net_values" (list float)
+            |> required "all_numbers" (list int)
             |> required "congressperson_id" (nullable int)
             |> required "congressperson_name" (nullable string)
             |> required "congressperson_document" (nullable int)

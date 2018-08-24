@@ -45,13 +45,6 @@ reimbursementNumbers =
         "Número dos reembolsos"
 
 
-netValues : TranslationSet
-netValues =
-    TranslationSet
-        "Net values"
-        "Valores líquidos"
-
-
 congresspersonId : TranslationSet
 congresspersonId =
     TranslationSet
