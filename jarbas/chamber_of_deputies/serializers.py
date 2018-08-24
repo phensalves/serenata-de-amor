@@ -83,7 +83,7 @@ class SameDayReimbursementSerializer(serializers.ModelSerializer):
             'applicant_id',
             'city',
             'document_id',
-            'subquota_id',
+            'subquota_number',
             'subquota_description',
             'supplier',
             'total_net_value',
@@ -114,7 +114,7 @@ class SubquotaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Reimbursement
-        fields = ('subquota_id', 'subquota_description')
+        fields = ('subquota_number', 'subquota_description')
 
 
 def to_float(number):

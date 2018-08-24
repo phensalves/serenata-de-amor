@@ -49,7 +49,7 @@ class Reimbursement(models.Model):
     term_id = models.IntegerField('Código da Legislatura', blank=True, null=True)
     term = models.IntegerField('Número da Legislatura', blank=True, null=True)
 
-    subquota_id = models.IntegerField('Número da Subcota', db_index=True)
+    subquota_number = models.IntegerField('Número da Subcota', db_index=True)
     subquota_description = models.CharField('Descrição da Subcota', max_length=140, db_index=True)
     subquota_group_id = models.IntegerField('Número da Especificação da Subcota', blank=True, null=True)
     subquota_group_description = models.CharField('Descrição da Especificação da Subcota', max_length=140, blank=True, null=True)

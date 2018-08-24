@@ -99,8 +99,8 @@ translate lang trans =
                 FieldTerm ->
                     ReimbursementField.term
 
-                FieldSubquotaId ->
-                    ReimbursementField.subquotaId
+                FieldSubquotaNumber ->
+                    ReimbursementField.subquotaNumber
 
                 FieldSubquotaDescription ->
                     ReimbursementField.subquotaDescription

@@ -28,6 +28,11 @@ class Migration(migrations.Migration):
             old_name="total_reimbursement_value",
             new_name="total_value",
         ),
+        migrations.RenameField(
+            model_name="reimbursement",
+            old_name="subquota_id",
+            new_name="subquota_number",
+        ),
         migrations.AddField(
             model_name="reimbursement",
             name="numbers",

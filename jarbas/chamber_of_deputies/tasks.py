@@ -34,10 +34,6 @@ TYPES = tuple(chain(
     (('issue_date', DateAsStringField),)
 ))
 
-RENAME = (
-    ('subquota_number', 'subquota_id'),
-)
-
 
 def serialize(row):
     """
@@ -47,8 +43,5 @@ def serialize(row):
     for key, type_ in TYPES:
         value = row.get(key)
         row[key] = type_.deserialize(value)
-
-    for old, new in RENAME:
-        row[new] = row.pop(old)
 
     return Reimbursement(**row)

@@ -24,7 +24,7 @@ type Label
     | Party
     | TermId
     | Term
-    | SubquotaId
+    | SubquotaNumber
     | SubquotaDescription
     | SubquotaGroupId
     | SubquotaGroupDescription
@@ -57,14 +57,14 @@ searchableLabels =
     , ( IssueDateEnd, "issueDateEnd" )
     , ( IssueDateStart, "issueDateStart" )
     , ( Month, "month" )
-    , ( SubquotaId, "subquotaId" )
+    , ( SubquotaNumber, "subquotaNumber" )
     , ( Year, "year" )
     ]
 
 
 allLabels : List Label
 allLabels =
-    [ Year, DocumentId, ApplicantId, TotalValue, TotalNetValue, Numbers, CongresspersonId, CongresspersonName, CongresspersonDocument, State, Party, TermId, Term, SubquotaId, SubquotaDescription, SubquotaGroupId, SubquotaGroupDescription, Company, CnpjCpf, DocumentType, DocumentNumber, DocumentValue, IssueDate, IssueDateStart, IssueDateEnd, Month, RemarkValue, Installment, BatchNumber, ReimbursementValues, Passenger, LegOfTheTrip, Probability, Suspicions ]
+    [ Year, DocumentId, ApplicantId, TotalValue, TotalNetValue, Numbers, CongresspersonId, CongresspersonName, CongresspersonDocument, State, Party, TermId, Term, SubquotaNumber, SubquotaDescription, SubquotaGroupId, SubquotaGroupDescription, Company, CnpjCpf, DocumentType, DocumentNumber, DocumentValue, IssueDate, IssueDateStart, IssueDateEnd, Month, RemarkValue, Installment, BatchNumber, ReimbursementValues, Passenger, LegOfTheTrip, Probability, Suspicions ]
 
 
 labelToUrl : Label -> String
@@ -88,7 +88,7 @@ sets =
           , [ ApplicantId
             , Year
             , Month
-            , SubquotaId
+            , SubquotaNumber
             , CnpjCpf
             , IssueDateStart
             , IssueDateEnd
@@ -125,7 +125,7 @@ isNumeric label =
         Month ->
             True
 
-        SubquotaId ->
+        SubquotaNumber ->
             True
 
         Year ->
@@ -224,8 +224,8 @@ getLabelTranslation language (Field label _) =
                 Term ->
                     FieldTerm
 
-                SubquotaId ->
-                    FieldSubquotaId
+                SubquotaNumber ->
+                    FieldSubquotaNumber
 
                 SubquotaDescription ->
                     FieldSubquotaDescription

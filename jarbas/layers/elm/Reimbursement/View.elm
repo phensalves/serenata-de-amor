@@ -169,7 +169,7 @@ sourceUrl reimbursement =
         [ ( "nuDeputadoId", toString reimbursement.applicantId )
         , ( "numMes", toString reimbursement.month )
         , ( "numAno", toString reimbursement.year )
-        , ( "despesa", toString reimbursement.subquotaId )
+        , ( "despesa", toString reimbursement.subquotaNumber )
         , ( "cnpjFornecedor", Maybe.withDefault "" reimbursement.cnpjCpf )
         , ( "idDocumento", Maybe.withDefault "" reimbursement.documentNumber )
         ]
@@ -354,7 +354,7 @@ viewSummaryBlock lang reimbursement =
             String.concat
                 [ reimbursement.subquotaDescription
                 , " ("
-                , toString reimbursement.subquotaId
+                , toString reimbursement.subquotaNumber
                 , ")"
                 ]
 

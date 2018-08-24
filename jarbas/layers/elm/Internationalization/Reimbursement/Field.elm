@@ -101,8 +101,8 @@ term =
         "Número da legislatura"
 
 
-subquotaId : TranslationSet
-subquotaId =
+subquotaNumber : TranslationSet
+subquotaNumber =
     TranslationSet
         "Subquota number"
         "Número da Subcota"

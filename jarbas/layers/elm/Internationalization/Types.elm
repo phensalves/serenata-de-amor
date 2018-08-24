@@ -40,7 +40,7 @@ type TranslationId
     | FieldParty
     | FieldTermId
     | FieldTerm
-    | FieldSubquotaId
+    | FieldSubquotaNumber
     | FieldSubquotaDescription
     | FieldSubquotaGroupId
     | FieldSubquotaGroupDescription
