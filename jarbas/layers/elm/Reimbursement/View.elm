@@ -380,7 +380,7 @@ viewReimbursementDetails : Language -> Reimbursement -> Html Msg
 viewReimbursementDetails lang reimbursement =
     let
         reimbursements =
-            reimbursement.reimbursementNumbers
+            reimbursement.numbers
                 |> List.map toString
                 |> String.join ", "
 
@@ -392,7 +392,7 @@ viewReimbursementDetails lang reimbursement =
             [ Field ApplicantId <| toString reimbursement.applicantId
             , Field DocumentId <| toString reimbursement.documentId
             , Field ReimbursementValues <| maybeFormatPrices lang reimbursement.reimbursementValues
-            , Field ReimbursementNumbers <| reimbursements
+            , Field Numbers <| reimbursements
             , Field Fields.DocumentType <| documentType
             , Field DocumentNumber <| Maybe.withDefault "" reimbursement.documentNumber
             , Field Installment <| viewMaybeIntButZero reimbursement.installment

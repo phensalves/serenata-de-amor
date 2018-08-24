@@ -31,7 +31,7 @@ type TranslationId
     | FieldApplicantId
     | FieldTotalValue
     | FieldTotalNetValue
-    | FieldReimbursementNumbers
+    | FieldNumbers
     | FieldCongresspersonId
     | FieldCongressperson
     | FieldCongresspersonName

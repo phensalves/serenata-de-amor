@@ -38,8 +38,8 @@ totalNetValue =
         "Valor líquido total"
 
 
-reimbursementNumbers : TranslationSet
-reimbursementNumbers =
+numbers : TranslationSet
+numbers =
     TranslationSet
         "Reimbursement number"
         "Número dos reembolsos"
