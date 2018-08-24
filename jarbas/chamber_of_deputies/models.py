@@ -38,7 +38,6 @@ class Reimbursement(models.Model):
     total_value = models.DecimalField('Valor da Restituição', max_digits=10, decimal_places=3, blank=True, null=True)
     total_net_value = models.DecimalField('Valor Líquido', max_digits=10, decimal_places=3)
     reimbursement_numbers = models.CharField('Números dos Ressarcimentos', max_length=140)
-    net_values = models.CharField('Valores Líquidos dos Ressarcimentos', max_length=140)
 
     congressperson_id = models.IntegerField('Identificador Único do Parlamentar', blank=True, null=True)
     congressperson_name = models.CharField('Nome do Parlamentar', max_length=140, db_index=True, blank=True, null=True)
@@ -107,10 +106,6 @@ class Reimbursement(models.Model):
 
         self.save()
         return self.receipt_url
-
-    @property
-    def all_net_values(self):
-        return self.as_list(self.net_values, float)
 
     @property
     def all_reimbursement_values(self):
