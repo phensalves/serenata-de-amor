@@ -39,7 +39,6 @@ type alias Reimbursement =
     , remarkValue : Maybe Float
     , installment : Maybe Int
     , batchNumber : Maybe Int
-    , reimbursementValues : Maybe (List Float)
     , passenger : Maybe String
     , legOfTheTrip : Maybe String
     , probability : Maybe Float

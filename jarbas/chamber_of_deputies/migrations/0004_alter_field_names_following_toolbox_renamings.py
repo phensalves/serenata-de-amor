@@ -46,4 +46,7 @@ class Migration(migrations.Migration):
         migrations.RemoveField(
             model_name="reimbursement", name="reimbursement_numbers"
         ),
+        migrations.RemoveField(
+            model_name="reimbursement", name="reimbursement_values"
+        ),
     ]

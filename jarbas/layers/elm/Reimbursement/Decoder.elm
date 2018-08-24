@@ -88,7 +88,6 @@ singleDecoder lang apiKey =
             |> required "remark_value" (nullable float)
             |> required "installment" (nullable int)
             |> required "batch_number" (nullable int)
-            |> required "all_reimbursement_values" (nullable <| list float)
             |> required "passenger" (nullable string)
             |> required "leg_of_the_trip" (nullable string)
             |> required "probability" (nullable float)

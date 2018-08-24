@@ -153,9 +153,6 @@ translate lang trans =
                 FieldBatchNumber ->
                     ReimbursementField.batchNumber
 
-                FieldReimbursementValues ->
-                    ReimbursementField.reimbursementValues
-
                 FieldPassenger ->
                     ReimbursementField.passenger
 

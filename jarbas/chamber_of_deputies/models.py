@@ -66,7 +66,6 @@ class Reimbursement(models.Model):
     remark_value = models.DecimalField('Valor da Glosa', max_digits=10, decimal_places=3, blank=True, null=True)
     installment = models.IntegerField('Número da Parcela', blank=True, null=True)
     batch_number = models.IntegerField('Número do Lote')
-    reimbursement_values = models.CharField('Valores dos Ressarcimentos', max_length=140, blank=True, null=True)
 
     passenger = models.CharField('Passageiro', max_length=140, blank=True, null=True)
     leg_of_the_trip = models.CharField('Trecho', max_length=140, blank=True, null=True)
@@ -106,10 +105,6 @@ class Reimbursement(models.Model):
 
         self.save()
         return self.receipt_url
-
-    @property
-    def all_reimbursement_values(self):
-        return self.as_list(self.reimbursement_values, float)
 
     @property
     def all_reimbursement_numbers(self):

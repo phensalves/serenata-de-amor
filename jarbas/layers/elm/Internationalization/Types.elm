@@ -58,7 +58,6 @@ type TranslationId
     | FieldRemarkValue
     | FieldInstallment
     | FieldBatchNumber
-    | FieldReimbursementValues
     | FieldPassenger
     | FieldLegOfTheTrip
     | FieldProbability

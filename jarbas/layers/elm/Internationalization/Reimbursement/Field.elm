@@ -220,13 +220,6 @@ batchNumber =
         "Número do lote"
 
 
-reimbursementValues : TranslationSet
-reimbursementValues =
-    TranslationSet
-        "Reimbursement values"
-        "Valor dos reembolsos"
-
-
 passenger : TranslationSet
 passenger =
     TranslationSet
