@@ -23,6 +23,21 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.AlterField(
+            model_name="reimbursement",
+            name="document_id",
+            field=models.IntegerField(db_index=True),
+        ),
+        migrations.AlterField(
+            model_name="reimbursement",
+            name="supplier",
+            field=models.CharField(max_length=256),
+        ),
+        migrations.AlterField(
+            model_name="reimbursement",
+            name="issue_date",
+            field=models.DateField(null=True),
+        ),
         migrations.RenameField(
             model_name="reimbursement",
             old_name="total_reimbursement_value",
@@ -46,7 +61,5 @@ class Migration(migrations.Migration):
         migrations.RemoveField(
             model_name="reimbursement", name="reimbursement_numbers"
         ),
-        migrations.RemoveField(
-            model_name="reimbursement", name="reimbursement_values"
-        ),
+        migrations.RemoveField(model_name="reimbursement", name="reimbursement_values"),
     ]

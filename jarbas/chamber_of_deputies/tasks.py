@@ -1,8 +1,6 @@
 from itertools import chain
 
-from rows.fields import FloatField
-
-from jarbas.chamber_of_deputies.fields import ArrayField, DateAsStringField, IntegerField
+from jarbas.chamber_of_deputies.fields import ArrayField, DateAsStringField, FloatField, IntegerField
 from jarbas.chamber_of_deputies.models import Reimbursement
 
 
