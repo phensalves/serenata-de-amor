@@ -368,7 +368,7 @@ viewSummaryBlock lang reimbursement =
             , Field DocumentValue <| formatPrice lang reimbursement.documentValue
             , Field RemarkValue <| maybeFormatPrice lang reimbursement.remarkValue
             , Field TotalNetValue <| formatPrice lang reimbursement.totalNetValue
-            , Field TotalReimbursementValue <| maybeFormatPrice lang reimbursement.totalReimbursementValue
+            , Field TotalValue <| maybeFormatPrice lang reimbursement.totalValue
             , Field Suspicions <| viewSuspicions lang reimbursement.suspicions
             ]
                 |> List.filter (Fields.getValue >> String.isEmpty >> not)

@@ -66,8 +66,8 @@ translate lang trans =
                 FieldApplicantId ->
                     ReimbursementField.applicantId
 
-                FieldTotalReimbursementValue ->
-                    ReimbursementField.totalReimbursementValue
+                FieldTotalValue ->
+                    ReimbursementField.totalValue
 
                 FieldTotalNetValue ->
                     ReimbursementField.totalNetValue

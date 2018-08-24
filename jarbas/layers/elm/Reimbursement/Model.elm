@@ -15,7 +15,7 @@ type alias Reimbursement =
     { year : Int
     , documentId : Int
     , applicantId : Int
-    , totalReimbursementValue : Maybe Float
+    , totalValue : Maybe Float
     , totalNetValue : Float
     , reimbursementNumbers : List Int
     , netValues : List Float

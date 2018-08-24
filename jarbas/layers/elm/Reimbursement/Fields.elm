@@ -13,7 +13,7 @@ type Label
     = Year
     | DocumentId
     | ApplicantId
-    | TotalReimbursementValue
+    | TotalValue
     | TotalNetValue
     | ReimbursementNumbers
     | NetValues
@@ -65,7 +65,7 @@ searchableLabels =
 
 allLabels : List Label
 allLabels =
-    [ Year, DocumentId, ApplicantId, TotalReimbursementValue, TotalNetValue, ReimbursementNumbers, NetValues, CongresspersonId, CongresspersonName, CongresspersonDocument, State, Party, TermId, Term, SubquotaId, SubquotaDescription, SubquotaGroupId, SubquotaGroupDescription, Company, CnpjCpf, DocumentType, DocumentNumber, DocumentValue, IssueDate, IssueDateStart, IssueDateEnd, Month, RemarkValue, Installment, BatchNumber, ReimbursementValues, Passenger, LegOfTheTrip, Probability, Suspicions ]
+    [ Year, DocumentId, ApplicantId, TotalValue, TotalNetValue, ReimbursementNumbers, NetValues, CongresspersonId, CongresspersonName, CongresspersonDocument, State, Party, TermId, Term, SubquotaId, SubquotaDescription, SubquotaGroupId, SubquotaGroupDescription, Company, CnpjCpf, DocumentType, DocumentNumber, DocumentValue, IssueDate, IssueDateStart, IssueDateEnd, Month, RemarkValue, Installment, BatchNumber, ReimbursementValues, Passenger, LegOfTheTrip, Probability, Suspicions ]
 
 
 labelToUrl : Label -> String
@@ -192,8 +192,8 @@ getLabelTranslation language (Field label _) =
                 ApplicantId ->
                     FieldApplicantId
 
-                TotalReimbursementValue ->
-                    FieldTotalReimbursementValue
+                TotalValue ->
+                    FieldTotalValue
 
                 TotalNetValue ->
                     FieldTotalNetValue

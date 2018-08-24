@@ -64,7 +64,7 @@ singleDecoder lang apiKey =
             |> required "year" int
             |> required "document_id" int
             |> required "applicant_id" int
-            |> required "total_reimbursement_value" (nullable float)
+            |> required "total_value" (nullable float)
             |> required "total_net_value" float
             |> required "all_reimbursement_numbers" (list int)
             |> required "all_net_values" (list float)

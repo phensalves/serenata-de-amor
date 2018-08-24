@@ -29,7 +29,7 @@ type TranslationId
     | FieldYear
     | FieldDocumentId
     | FieldApplicantId
-    | FieldTotalReimbursementValue
+    | FieldTotalValue
     | FieldTotalNetValue
     | FieldReimbursementNumbers
     | FieldNetValues

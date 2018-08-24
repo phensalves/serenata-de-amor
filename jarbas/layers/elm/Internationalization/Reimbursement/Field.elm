@@ -24,8 +24,8 @@ applicantId =
         "Identificador do Solicitante"
 
 
-totalReimbursementValue : TranslationSet
-totalReimbursementValue =
+totalValue : TranslationSet
+totalValue =
     TranslationSet
         "Total reimbursement value"
         "Valor total dos reembolsos"
