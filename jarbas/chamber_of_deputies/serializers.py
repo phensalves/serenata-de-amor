@@ -15,7 +15,7 @@ class ReimbursementSerializer(serializers.ModelSerializer):
     rosies_tweet = serializers.SerializerMethodField()
     remark_value = serializers.SerializerMethodField()
     total_net_value = serializers.SerializerMethodField()
-    total_reimbursement_value = serializers.SerializerMethodField()
+    total_value = serializers.SerializerMethodField()
 
     def get_all_net_values(self, obj):
         return obj.all_net_values
@@ -47,8 +47,8 @@ class ReimbursementSerializer(serializers.ModelSerializer):
     def get_total_net_value(self, obj):
         return to_float(obj.total_net_value)
 
-    def get_total_reimbursement_value(self, obj):
-        return to_float(obj.total_reimbursement_value)
+    def get_total_value(self, obj):
+        return to_float(obj.total_value)
 
     class Meta:
         model = Reimbursement

@@ -24,7 +24,6 @@ INTEGERS = (
 
 FLOATS = (
     'document_value',
-    'reimbursement_value_total',
     'remark_value',
     'total_net_value'
 )
@@ -37,7 +36,6 @@ TYPES = tuple(chain(
 
 RENAME = (
     ('subquota_number', 'subquota_id'),
-    ('reimbursement_value_total', 'total_reimbursement_value'),
 )
 
 
