@@ -23,7 +23,7 @@ services:
       - "8000:8000"
     volumes:
       - .:/code
-      - ./contrib/data:/mnt/data
+      - /tmp/serenata-data:/mnt/data
 
   tasks:
     image: serenata/django
